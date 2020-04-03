@@ -2,9 +2,7 @@
 
 This python programe allows you to download song cover arts from Spotify or Soundcloud and then embeds them to your MP3 files. This project contains two main files.
 
-<p align="center">
-  <img width="789" height="555" src="https://user-images.githubusercontent.com/55880211/78374129-1944f200-75e9-11ea-83ab-fbbd8783a190.gif">
-</p>
+![ezgif com-optimize](https://user-images.githubusercontent.com/55880211/78372532-07624f80-75e7-11ea-8ff8-43c1c19e2dfd.gif)
 
 ### Git Installation
 ```
@@ -22,8 +20,6 @@ $ pip3 install -r requirements.txt
 ```
 python covermaster.py
 ```
-
-![ezgif com-optimize](https://user-images.githubusercontent.com/55880211/78372532-07624f80-75e7-11ea-8ff8-43c1c19e2dfd.gif)
 
 ## How to get Spotify and Soundcloud URLs
 ### Spotify
