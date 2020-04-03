@@ -15,6 +15,9 @@ $ cd CoverMaster
 # install the requirements
 $ pip3 install -r requirements.txt
 ```
+
+> You can also download the __compiled__ version from [Releases tab](https://github.com/sameera-madushan/CoverMaster/releases)
+
 ## Usage
 
 ```
