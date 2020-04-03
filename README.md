@@ -2,7 +2,7 @@
 
 This python programe allows you to download song cover arts from Spotify or Soundcloud and then embeds them to your MP3 files. This project contains two main files.
 
-![Untitled Diagram (1)](https://user-images.githubusercontent.com/55880211/78234859-647dd880-74f5-11ea-83e4-55684640980b.png)
+![i](https://user-images.githubusercontent.com/55880211/78374129-1944f200-75e9-11ea-83ab-fbbd8783a190.gif)
 
 ### Git Installation
 ```
@@ -18,12 +18,10 @@ $ pip3 install -r requirements.txt
 ## Usage
 
 ```
-python cover.py 
+python covermaster.py
 ```
-```
-python changer.py
-```
-![ezgif com-optimize](https://user-images.githubusercontent.com/55880211/78222471-ef090c80-74e2-11ea-9dad-8ac9de662fce.gif)
+
+![ezgif com-optimize](https://user-images.githubusercontent.com/55880211/78372532-07624f80-75e7-11ea-8ff8-43c1c19e2dfd.gif)
 
 ## How to get Spotify and Soundcloud URLs
 ### Spotify
@@ -32,7 +30,7 @@ python changer.py
 ![soundcloud2](https://user-images.githubusercontent.com/55880211/78242928-7fa21580-7500-11ea-9cee-bc80748ea923.gif)
 
 ## To Do
-- [ ] Integrate cover.py into changer.py 
+- [x] Integrate cover.py into changer.py 
 
 ### Support & Contributions
 - Please ⭐️ this repository if this project helped you!
