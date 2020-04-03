@@ -6,8 +6,6 @@ This python programe allows you to download song cover arts from Spotify or Soun
   <img width="789" height="555" src="https://user-images.githubusercontent.com/55880211/78374129-1944f200-75e9-11ea-83ab-fbbd8783a190.gif">
 </p>
 
-![i](https://user-images.githubusercontent.com/55880211/78374129-1944f200-75e9-11ea-83ab-fbbd8783a190.gif)
-
 ### Git Installation
 ```
 # clone the repo
