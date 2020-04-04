@@ -1,3 +1,4 @@
+# [Coded By Sameera Madushan]
 '''Please Note: this is a very noobish script that i wrote to download a coverr art from spotify or soundcloud and then embeds them to your MP3 files. 
 This is my first script where i used python GUI programming. Suggestion and Criticisms are warmly welcome'''
 
@@ -13,16 +14,14 @@ from datetime import datetime
 from tkinter import filedialog
 from tkinter import messagebox  
 from mutagen.id3 import ID3, APIC, error
+from tkinter.filedialog import asksaveasfilename 
 
 
 def changer():
     #create window object
     root1 = tk.Toplevel(root)
 
-    #remove the maximize button
-    # root1.resizable(0,0)
-
-    #title, window resolution of the main window
+    #title and window resolution of the main window
     root1.geometry('400x300')
     root1.title('Cover Art Changer')
 
@@ -89,17 +88,12 @@ def cover():
 
         search = re.search(r'<meta property=\"og:image\" content=\"(.*?)\">', req).group(1)
         file_size_request = requests.get(search, stream=True)
-
-        # Getting response of http request without content-length therefore implemented this 
-        file_size = len(file_size_request.content)
-
+        files = [("jpeg files","*.jpg")] 
+        filelocation = asksaveasfilename(filetypes = files, defaultextension = files)
         block_size = 1024 
-        filename = datetime.strftime(datetime.now(), '%Y-%m-%d-%H-%M-%S')
-        with open(filename + '.jpg', 'wb') as f:
+        with open(filelocation, 'wb') as f:
             for data in file_size_request.iter_content(block_size):
                 f.write(data)
-        # label1 = Label(root2, text="Image downloaded successfully")
-        # label1.pack()
         box1 = messagebox.showinfo("Done","Image downloaded successfully")  
 
 
@@ -120,14 +114,14 @@ def cover():
         if 1 in list:
             _y = search2.group(1)
             file_size_request = requests.get(_y, stream=True)
+            files = [("jpeg files","*.jpg")] 
+            filelocation = asksaveasfilename(filetypes = files, defaultextension = files)
             filename = datetime.strftime(datetime.now(), '%Y-%m-%d-%H-%M-%S')
             file_size = int(file_size_request.headers['Content-Length'])
             block_size = 1024 
-            with open(filename + '.jpg', 'wb') as f:
+            with open(filelocation, 'wb') as f:
                 for data in file_size_request.iter_content(block_size):
                     f.write(data)
-            # label1 = Label(root2, text="Image downloaded successfully")
-            # label1.pack()
             box2 = messagebox.showinfo("Done","Image downloaded successfully")  
 
 
@@ -143,8 +137,6 @@ def cover():
             t = threading.Thread(target=soundcloud_Download)
             t.start()
         else:
-            # label1 = Label(root2, text="Error")
-            # label1.pack()
             box3 = messagebox.showerror("Error","Unknown Error!!")  
 
     def clean():
